@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import validator from "validator";
-import Card from "../components/Card/Card";
+import Card from "../components/Card";
 import { ChangeEvent } from "react-router/node_modules/@types/react";
 import { client } from "../assets/api.config";
-import Input from "../components/Input/Input";
+import Input from "../components/Input";
 import "../assets/css/routes/Home.css";
 
 export const Home = () => {

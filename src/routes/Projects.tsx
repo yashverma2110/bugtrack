@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Card from "../components/Card/Card";
-import Input from "../components/Input/Input";
-import Header from "../layout/Header/Header";
+import Card from "../components/Card";
+import Input from "../components/Input";
+import Header from "../layout/Header";
 import { Project } from "../types";
 import "../assets/css/routes/Projects.css";
-import Modal from "../components/Modal/Modal";
+import Modal from "../components/Modal";
 import { useHistory } from "react-router-dom";
 import validator from "validator";
 import { authClient, useToken } from "../assets/api.config";

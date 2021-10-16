@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import "./Header.css";
+import "./styles.css";
 
 const Header = () => {
   let { push } = useHistory();

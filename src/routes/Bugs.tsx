@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useCallback, useRef } from "react";
-import Card from "../components/Card/Card";
-import Input from "../components/Input/Input";
-import Modal from "../components/Modal/Modal";
-import UserSelector from "../components/UserSelector/UserSelector";
-import Header from "../layout/Header/Header";
+import Card from "../components/Card";
+import Input from "../components/Input";
+import Modal from "../components/Modal";
+import UserSelector from "../components/UserSelector";
+import Header from "../layout/Header";
 import { Bug, Project } from "../types";
 import "../assets/css/routes/ProjectDetails.css";
 import { useToken, authClient } from "../assets/api.config";
