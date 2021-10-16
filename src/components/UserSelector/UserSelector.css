@@ -1,0 +1,46 @@
+.selector-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-text {
+  font-size: 0.8em;
+  width: fit-content;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 2px 7px;
+}
+
+.dropdown > ul {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  padding: 0;
+  background: white;
+  border-radius: 8px;
+}
+
+.dropdown > ul > li {
+  padding: 8px;
+  list-style-type: none;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+.dropdown > ul > li:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.user-section {
+  display: flex;
+  margin-top: 5px;
+  padding: 5px 0px;
+  max-width: 150px;
+  overflow: auto;
+}

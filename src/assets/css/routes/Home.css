@@ -1,0 +1,19 @@
+.home-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.switch-login {
+  font-size: 0.8em;
+  font-weight: 600;
+  cursor: pointer;
+}
