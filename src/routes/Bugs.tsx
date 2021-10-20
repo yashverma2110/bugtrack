@@ -71,10 +71,22 @@ const Bugs = () => {
     setUsers(users);
   }, []);
 
-  const handleUserRemoval = async (bug: Bug, userId: string) => {
-    await authClient(token).put(`/bug/contributor/remove/${bug._id}`, {
-      userId,
-    });
+  const handleUserRemoval = async (
+    bug: Bug,
+    userId: string,
+    bugIndex: number
+  ) => {
+    const { data }: any = await authClient(token).put(
+      `/bug/contributor/remove/${bug._id}`,
+      {
+        userId,
+      }
+    );
+
+    const finalBugs = [...bugs];
+    finalBugs.splice(bugIndex, 1, data.bug);
+
+    setBugs(finalBugs);
   };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -144,7 +156,7 @@ const Bugs = () => {
         </form>
       </Modal>
       <div className="bug-container">
-        {bugs.map((bug) => {
+        {bugs.map((bug, bugIndex) => {
           return (
             <Card key={bug._id}>
               <div className="bug-title">{bug.title}</div>
@@ -172,7 +184,9 @@ const Bugs = () => {
                         {user.name}
                         <span
                           className="chip-delete"
-                          onClick={() => handleUserRemoval(bug, user.id)}
+                          onClick={() =>
+                            handleUserRemoval(bug, user.id, bugIndex)
+                          }
                         >
                           x
                         </span>

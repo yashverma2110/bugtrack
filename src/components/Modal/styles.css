@@ -1,6 +1,5 @@
 .modal {
   position: absolute;
-  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,6 +9,7 @@
 }
 
 .modal-body {
+  z-index: 999;
   background-color: white;
   padding: 10px;
   border: none;
